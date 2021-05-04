@@ -1,15 +1,28 @@
-A library for Dart developers.
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+# **Karee Inject**
+
+ Library used to help developers
+to better manage dependency injection during flutter development.
 
 ## Usage
 
+`Karee Inject` provide an amazing collection of annotation like `Service` for services, `Value` for reading value from application config file, `Autowired` to auto initialize classe and `Persistable` 
 A simple usage example:
 
+Use of `@Persistable` with data model
 ```dart
 import 'package:karee_inject/karee_inject.dart';
 
+@Persistable
+class User {
+  double id;
+  String name;
+}
+```
+
+Use of `Service`to define a service, and `Autowired`to inject into property;
+
+```dart
 @Service
 class ServiceUser {
 
@@ -17,8 +30,7 @@ class ServiceUser {
   DatabaseInterface db;
 
   User getUserById(double id){
-    
-    db.find(User.runtimeType)
+    return db.find(User.runtimeType)
       .where('id', isEqualTo: id);
   }
 }
