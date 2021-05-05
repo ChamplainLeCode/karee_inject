@@ -1,3 +1,5 @@
-class Service {
-  const Service();
+class ServiceAnnotation {
+  const ServiceAnnotation();
 }
+
+const ServiceAnnotation Service = ServiceAnnotation();

@@ -1,3 +1,5 @@
-class Autowired {
-  const Autowired();
+class AutowiredAnnotation {
+  const AutowiredAnnotation();
 }
+
+const AutowiredAnnotation Autowired = AutowiredAnnotation();
