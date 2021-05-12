@@ -6,7 +6,8 @@ description: Part of Karee that manage all annotation used to inject dependency
 environment:
   sdk: '>=2.12.0 <3.0.0'
 
-#dependencies:
+dependencies:
+  reflectable: ^3.0.1
 #  path: ^1.7.0
 
 dev_dependencies:
