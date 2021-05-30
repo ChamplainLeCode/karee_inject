@@ -1,5 +1,6 @@
-library karee_core.annotation;
+import 'package:meta/meta_meta.dart';
 
+@Target({TargetKind.field})
 class AutowiredAnnotation {
   const AutowiredAnnotation();
 }

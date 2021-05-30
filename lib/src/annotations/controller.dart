@@ -1,13 +1,11 @@
+import 'package:meta/meta_meta.dart';
 import 'package:reflectable/reflectable.dart';
 
 ///
-/// @Author Champlain Marius Bakop
-///
-/// @email champlainmarius20@gmail.com
-///
-/// @github ChamplainLeCode
+/// By Champlain Marius Bakop
 ///
 /// ControllerReflectable: constant class used to create instance of Controller annotation
+@Target({TargetKind.classType})
 class ControllerReflectable extends Reflectable {
   static Map<String, InstanceMirror> reflectors = {};
   const ControllerReflectable() : super(invokingCapability);

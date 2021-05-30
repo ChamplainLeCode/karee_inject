@@ -1,4 +1,7 @@
+import 'package:meta/meta_meta.dart';
+
 /// Classe use to annotate screens
+@Target({TargetKind.classType})
 class Screen {
   final String name;
   final bool isInitial;
