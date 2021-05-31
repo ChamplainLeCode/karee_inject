@@ -38,3 +38,14 @@ class ServiceUser {
       
   }
 }
+```
+
+## Test
+
+```bash
+# Générate additional source first
+flutter packages pub run build_runner build --delete-conflicting-outputs
+
+# Then run test
+flutter test
+```
