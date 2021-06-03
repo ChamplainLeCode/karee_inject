@@ -20,5 +20,6 @@ const ControllerReflectable Controller = ControllerReflectable();
 /// controllers in core library
 ///
 void subscribeController(dynamic controller) {
-  ControllerReflectable.reflectors[controller.runtimeType.toString()] = Controller.reflect(controller);
+  ControllerReflectable.reflectors[controller.runtimeType.toString()] =
+      Controller.reflect(controller);
 }
