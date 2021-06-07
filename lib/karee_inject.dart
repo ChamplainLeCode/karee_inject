@@ -1,8 +1,14 @@
-/// Support for doing something awesome.
+/// ## Karee.annotations
 ///
-/// More dartdocs go here.
-library karee_inject;
+/// Support for Karee annotations.
+///
+/// this lib provide annotations as
+/// - Autowired
+/// - Controller
+/// - Persistable
+/// - Screen
+/// - Service
+/// - Value
+library karee.annotations;
 
-import 'package:karee_inject/src/annoations/annotations.dart';
-
-export 'src/annoations/annotations.dart';
+export 'src/annotations/annotations.dart';
