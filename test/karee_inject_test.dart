@@ -1,12 +1,6 @@
 import 'package:karee_inject/karee_inject.dart'
-    show
-        Autowired,
-        Service,
-        Controller,
-        ControllerReflectable,
-        subscribeController;
+    show Autowired, Controller, KareeInjector, Service, subscribeController;
 import 'package:test/test.dart';
-import 'karee_inject_test.reflectable.dart';
 
 @Controller
 class SomeController {
@@ -21,24 +15,20 @@ class ServiceTest {
 
 void main() {
   group('Test Karee Annotations', () {
-    var myController;
+    late SomeController myController;
 
     setUp(() {
-      initializeReflectable();
       myController = SomeController();
     });
-    test('-> Test Controllers', () {
-      var initialSize = ControllerReflectable.reflectors.length;
+    test('-> Test KareeInjector', () {
+      var controller = KareeInjector.instance<SomeController>();
       subscribeController(myController);
-      var controllerAddedSize = ControllerReflectable.reflectors.length;
+      var controllerSubscribed = KareeInjector.instance<SomeController>();
 
       var a = 10, b = 11;
-      expect(initialSize, 0);
-      expect(controllerAddedSize, 1);
-      expect(
-          ControllerReflectable.reflectors[myController.runtimeType.toString()]!
-              .invoke('add', [a, b]),
-          21);
+      expect(controller, null);
+      expect(controllerSubscribed, myController);
+      expect(controllerSubscribed!.add(a, b), 21);
     });
   });
 }

@@ -18,19 +18,24 @@ class User {
   double id;
   String name;
 
+  User(this.id, this.name);
+
 }
 ```
 
-Use of `Service`to define a service, and `Autowired`to inject into property;
+Use of `Service` to define a service, `Autowired` and `Value` to inject application configuration and other services.
 
 ```dart
 @Service
 class ServiceUser {
 
-  @Autowired
-  DatabaseInterface db;
+  @Value('@{application.server.base-url}')
+  late final String baseUrl;
 
-  User getUserById(double id){
+  @Autowired
+  late final DatabaseInterface db;
+
+  User? getUserById(double id){
 
     return db
       .find(User.runtimeType)
@@ -39,6 +44,32 @@ class ServiceUser {
   }
 }
 ```
+
+
+Use of `Controller` to define a Controller, and `Autowired` to inject Services property;
+
+```dart
+@Controller
+class UserController {
+
+  @Autowired
+  late final UserService userService;
+
+  void showUserDetailView(double id){
+
+    User? user = userService.getUserById();
+    
+    if(user == null){
+      screen(UserNotFoundScreen(), RouteMode.PUSH);
+      return;
+    }
+
+    screen(UserDetailScreen(user: user), RouteMode.PUSH);  
+  }
+}
+```
+
+
 
 ## Test
 
