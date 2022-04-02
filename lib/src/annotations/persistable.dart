@@ -1,3 +1,4 @@
+/// Not used annotation
 class Persistable {
   final String collection;
   final Type? serializer;

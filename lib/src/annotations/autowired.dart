@@ -1,5 +1,6 @@
 import 'package:meta/meta_meta.dart';
 
+/// Annotation for injecting Services and Controller
 @Target({TargetKind.field})
 class AutowiredAnnotation {
   const AutowiredAnnotation();
@@ -82,7 +83,7 @@ class AutowiredAnnotation {
 ///     class ParameterController {
 ///
 ///       @Autowired
-///       ParameterService service;
+///       late final ParameterService service;
 ///
 ///
 ///     }
