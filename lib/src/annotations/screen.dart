@@ -44,8 +44,13 @@ import 'package:meta/meta_meta.dart';
 ///
 @Target({TargetKind.classType})
 class Screen {
+  /// The name of this screen. Optional, if specified, it can be used to load this screen by name.
   final String name;
+
+  /// Flag that indicates whether the screen is the first screen of the application or not.
   final bool isInitial;
+
+  /// Constructor of Screen's annotation.
   const Screen(this.name, {this.isInitial = false});
 
   @override

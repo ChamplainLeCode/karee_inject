@@ -1,4 +1,6 @@
 
+## 1.0.3+1
+- Update documentation for Screen, Module, KareeInjector
 ## 1.0.3
 - Update Code review in [controller.dart](./lib/src/controller.dart)
 - Add new Annotation `Module`

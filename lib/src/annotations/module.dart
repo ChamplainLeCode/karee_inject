@@ -29,8 +29,12 @@
 ///}
 ///```
 class Module {
+  /// The name of this module. Note that this name should be the same in module routes.
   final String name;
+
+  /// This flag indicate whether the module should start before the main application.
   final bool isRoot;
 
+  /// Constructor for a [Module]
   const Module({required this.name, this.isRoot = false});
 }
