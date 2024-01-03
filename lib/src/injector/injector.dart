@@ -1,5 +1,8 @@
 /// Karee part used to retrieve injectable via its type.
 class KareeInjector {
+  /// Constructor of KareeInjector
+  KareeInjector();
+  
   /// The variable [_instance] is used to store reference to objected injected.
   static final Map<dynamic, dynamic> _instance = {};
 
