@@ -1,7 +1,9 @@
 import 'package:meta/meta_meta.dart';
 
+/// Annotation on classes to define them like a part of the service layer.
 @Target({TargetKind.classType})
 class ServiceAnnotation {
+  /// Construtor of the annotation.
   const ServiceAnnotation();
 }
 
