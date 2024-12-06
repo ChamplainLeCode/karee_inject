@@ -21,7 +21,9 @@ import 'package:meta/meta_meta.dart';
 /// ```
 @Target({TargetKind.field})
 class Value {
+  /// The name of the env variable in application config file (application.yaml)
   final String name;
 
+  /// The constructor of the annotation.
   const Value(this.name);
 }

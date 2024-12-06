@@ -1,4 +1,8 @@
 
+## 1.0.4+1
+- Update builder for laster flutter sdk.
+## 1.0.3+2
+- Update documentation for Screen, Module, KareeInjector
 ## 1.0.3+1
 - Update documentation for Screen, Module, KareeInjector
 ## 1.0.3
